@@ -6,10 +6,10 @@ import { Navbar, Form, FormControl, Button } from "react-bootstrap";
 const Job = () => {
   const [jobList, setJobList] = useState([]);
   const history = useHistory();
+  const url = process.env.REACT_APP_BACKEND_SERVER_URL;
 
   const getJobData = async () => {
     try {
-      const url = `http://localhost:5001/jobs`;
       const response = await fetch(url);
       const data = await response.json();
       console.log("Data", data);
