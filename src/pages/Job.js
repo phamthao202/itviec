@@ -14,7 +14,7 @@ const Job = () => {
   const [keyword, setKeyword] = useState(query.get(QUERYSTR_PREFIX));
   // const [originalList, setOriginalList] = useState([]);
   const originalList = useSelector((state) => state.job.originalJobList);
-  console.log("original list", originalList);
+  console.log("original haha list", originalList);
   const url = process.env.REACT_APP_BACKEND_SERVER_URL;
 
   function useQuery() {
