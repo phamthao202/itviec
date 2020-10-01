@@ -1,6 +1,6 @@
 .header-logo-search {
   background-color: darkslategray;
-  height: 280px;
+  height: 300px;
 }
 .boc-cuc-job {
   display: flex;
@@ -8,7 +8,7 @@
 }
 .job-area {
   position: absolute;
-  top: 220px;
+  top: 260px;
 }
 .jobcard-logo {
   width: 100px;
@@ -27,28 +27,31 @@
 .nav-input-search {
   width: 500px !important;
 }
-.search-bar{
-  display:flex;
+.search-bar {
+  display: flex;
   justify-content: center;
 }
-.job-detail-form{
+.job-detail-form {
   background-color: rgb(136, 165, 136);
-  padding: 20px
+  padding: 20px;
 }
-.job-detail-apply-button{
-  width:100%;
-  background-color:rgb(69, 100, 76);
-  border-radius:2%;
+.job-detail-apply-button {
+  width: 100%;
+  background-color: rgb(69, 100, 76);
+  border-radius: 2%;
 }
-.job-detail-apply-button:hover{
-  background-color:grey;
+.job-detail-apply-button:hover {
+  background-color: grey;
 }
-.job-detail-header{
-  background-color:black;
+.job-detail-header {
+  background-color: black;
   margin-bottom: 70px;
-
 }
-img{
-  width:120px;
+img {
+  width: 120px;
   padding: 15px;
+}
+.login-area {
+  display: flex;
+  justify-content: center;
 }

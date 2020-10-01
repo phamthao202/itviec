@@ -15,12 +15,12 @@ const JobDetail = ({ name }) => {
   useEffect(() => {
     getDetailData();
   }, []);
-  if (job === null) return <div>khung</div>;
+  if (job === null) return <div>Loading</div>;
   return (
     <div>
       {console.log(job)}
       <div className="job-detail-header">
-      <img src="https://itviec.com/assets/logo-itviec-65afac80e92140efa459545bc1c042ff4275f8f197535f147ed7614c2000ab0f.png" />
+        <img src="https://itviec.com/assets/logo-itviec-65afac80e92140efa459545bc1c042ff4275f8f197535f147ed7614c2000ab0f.png" />
       </div>
       <div>
         <div className="container job-detail-form">

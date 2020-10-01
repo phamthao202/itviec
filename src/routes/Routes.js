@@ -16,6 +16,7 @@ const Routes = () => {
     <Switch>
        {/* //check tung ttruong hop. Chi hien thi cai dung dau tien*/}
       <Route exact path="/" component={Job} />
+      <Route exact path="/job" component={Job} />
       <Route path="/login" exact component={Login} />
       
       <ProtectedRoute
