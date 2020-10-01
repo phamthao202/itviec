@@ -1,24 +1,26 @@
 import React from "react";
-import { Form, Button } from "react-bootstrap";
+import { Alert, Form, Button } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { authAction } from "../redux/action/authAction";
-import {useHistory} from "react-router-dom"
+import { useHistory } from "react-router-dom";
 const Login = () => {
-  const history = useHistory()
+  const history = useHistory();
   const dispatch = useDispatch();
-  const user = useSelector((state) => state.auth.user);
+  const userAuth = useSelector((state) => state.auth.user);
+  const errorMes = useSelector((state) => state.auth.error);
   const login = (e) => {
     e.preventDefault();
-    console.log(e.target.pass.value)
+    console.log(e.target.pass.value);
     const user = { email: e.target.email.value, password: e.target.pass.value };
     dispatch(authAction.login(user));
-    history.push('/')
-    
   };
+  if (userAuth) {
+    history.push("/");
+  }
   return (
     <div>
-      {console.log("user issss", user)}
-      {user && user.email}
+      {console.log("user issss", userAuth)}
+      {userAuth && userAuth.email}
       <h1>Login page</h1>
       <button onClick={() => login()}>Login</button>
       <div className="job-detail-header">
@@ -46,6 +48,7 @@ const Login = () => {
           </Button>
         </Form>
       </div>
+      <div>{errorMes && <Alert variant="danger">{errorMes}</Alert>}</div>
     </div>
   );
 };

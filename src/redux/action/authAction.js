@@ -3,7 +3,9 @@ const login = (user) => (dispatch) => {
 
   try {
     if (!user.email || !user.password) {
-      dispatch({ type: "LOGIN_FAIL", payload: "you need email and password" });
+      console.log("in FAIL");
+      dispatch({ type: "LOGIN_FAIL", payload: "You need Email and Password" });
+
       return;
     }
     dispatch({ type: "LOGIN_SUCCESS", payload: user });
